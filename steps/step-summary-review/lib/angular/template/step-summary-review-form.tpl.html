@@ -1,0 +1,59 @@
+
+  <md-list>
+    <md-list-item class="md-2-line md-long-text">
+      <md-icon md-font-set="material-icons" class="icon-color">account_circle</md-icon>
+      <div class="md-list-item-text">
+        <p class="step-list-title primary-text">{{ctrl.workorder.title}}</p>
+        <small class="md-body-2 secondary-text">Title</small>
+      </div>
+    </md-list-item>
+
+    <md-divider></md-divider>
+
+    <md-list-item class="md-2-line md-long-text">
+      <md-icon md-font-set="material-icons" class="icon-color">room</md-icon>
+      <div class="md-list-item-text">
+        <p class="step-list-title primary-text">
+          {{ctrl.workorder.address}}
+        </p>
+        <!--<small class="md-body-2 secondary-text">{{ctrl.workorder.addressPostalCode}}</small>-->
+      </div>
+    </md-list-item>
+
+
+    <md-list-item>
+      <md-icon md-font-set="material-icons" class="icon-color">query_builder</md-icon>
+      <md-input-container class="epod-input-container">
+        <label class="label-text" for="productDescription">Time on Site</label>
+        <input flex="50" type="time" name="timeOnSite" ng-model="editableResults.timeOnSite" ng-change="fieldChanged('timeOnSite')" placeholder="HH:mm" ng-disabled="false">
+        <input flex="50" type="date" name="dateOnSite" ng-model="editableResults.dateOnSite" ng-change="fieldChanged('dateOnSite')" placeholder="DD/MM/YYYY" ng-disabled="false">
+        <div ng-show="ctrl.stepResultModel.modifiedTimeOnSite < ctrl.despatchTime || editableResults.timeOnSite < ctrl.depatchTime" class="danger">Time on Site cannot be before the despatch time</div>
+      </md-input-container>
+    </md-list-item>
+
+    <md-list-item>
+      <md-icon md-font-set="material-icons" class="icon-color"></md-icon>
+      <md-input-container class="step-input-container">
+        <label class="label-text" for="productDescription">Time off Site</label>
+        <input flex="50" type="time" name="timeOffSite" ng-model="editableResults.timeOffSite" ng-change="fieldChanged('timeOffSite')" placeholder="HH:mm" ng-disabled="false">
+        <input flex="50" type="date" name="dateOffSite" ng-model="editableResults.dateOffSite" ng-change="fieldChanged('dateOffSite')" placeholder="DD/MM/YYYY" ng-disabled="false">
+      </md-input-container>
+    </md-list-item>
+
+
+    <md-subheader class="details-banner">Comment</md-subheader>
+    <md-list-item>
+    <md-input-container class="step-input-container">
+        <label class="label-text" for="comment">Comments</label>
+        <textarea rows="5" class="step-review-comment-box" name="comments" ng-model="ctrl.stepResultModel.comments" ng-disabled="false"></textarea>
+      </md-input-container>
+    </md-list-item>
+
+
+     <md-subheader class="details-banner"></md-subheader>
+
+    <md-list-item>
+      <md-button class="step-review-accept-btn" ng-click="ctrl.onAction($event)" ng-disabled="ctrl.validateFields()">Accept</md-button>
+    </md-list-item>
+  </md-list>
+

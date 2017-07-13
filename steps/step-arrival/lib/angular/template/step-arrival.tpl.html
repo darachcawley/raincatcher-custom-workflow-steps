@@ -1,0 +1,29 @@
+
+
+<md-list class="step-arrival screen-bg">
+  <md-subheader class="details-banner">Arrival</md-subheader>
+
+  <md-list-item class="md-2-line md-long-text">
+    <md-icon md-font-set="material-icons" class="icon-color">timer</md-icon>
+    <div class="md-list-item-text">
+      <p class="step-list-title primary-text">{{stepGeneric.timeOnSite}}</p>
+      <small class="md-body-2 secondary-text">Time on Site</small>
+    </div>
+  </md-list-item>
+
+  <md-divider></md-divider>
+
+  <md-list-item class="md-2-line md-long-text">
+    <md-icon md-font-set="material-icons" class="icon-color">place</md-icon>
+    <div class="md-list-item-text">
+      <p class="step-list-title primary-text">
+        {{stepGeneric.arrivalLocation[0]}},
+        <br>{{stepGeneric.arrivalLocation[1]}}</p>
+      <small class="md-body-2 secondary-text">Arrival Location</small>
+    </div>
+  </md-list-item>
+
+  <md-list-item>
+      <div layout="row" class="step-generic-padding-lo-row" style="margin-bottom: 75px;"></div>
+  </md-list-item>
+</md-list>

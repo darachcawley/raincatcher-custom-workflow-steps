@@ -1,0 +1,29 @@
+{
+  "name": "raincatcher-custom-workflow-steps",
+  "version": "0.0.1",
+  "private": false,
+  "description": "Custom Workflow Steps for Raincatcher",
+  "repository": "git@github.com:darachcawley/raincatcher-custom-workflow-steps.git",
+  "main": "lib/angular/custom-workflow-steps-ng",
+  "scripts": {
+    "build": "grunt build"
+  },
+  "keywords": [
+    "wfm",
+    "workflow"
+  ],
+  "author": "Darach Cawley",
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.14.0",
+    "lodash": "4.7.0",
+    "ng-feedhenry": "0.3.0"
+  },
+  "devDependencies": {
+    "fh-wfm-template-build": "^0.2.1",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-eslint": "^18.0.0",
+    "grunt-shell": "^2.1.0"
+  }
+}

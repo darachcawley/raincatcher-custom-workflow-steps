@@ -1,0 +1,6 @@
+{
+  "rootStepFolder" : "steps",
+  "modulePrefix" : "wfm.",
+  "distTemplateFolder" : "/dist",
+  "sourceTemplateFolder" : "/lib/angular/template"
+}

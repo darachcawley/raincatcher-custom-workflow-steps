@@ -1,0 +1,25 @@
+<md-list class="step-arrival">
+  <md-subheader class="details-banner">Review</md-subheader>
+  <md-list-item class="md-2-line md-long-text" >
+    <md-icon md-font-set="material-icons" class="icon-color">comment</md-icon>
+      <div class="md-list-item-text">
+        <p class="epod-list-title primary-text">{{stepGeneric.comments}}</p>
+        <small class="md-body-2 secondary-text">Comments</small>
+      </div>
+  </md-list-item>
+
+  <md-divider></md-divider>
+
+  <md-list-item ng-if="stepGeneric.modifiedTimeOnSite" class="md-2-line md-long-text" >
+    <md-icon md-font-set="material-icons" class="icon-color">update</md-icon>
+    <div class="md-list-item-text">
+      <p class="step-list-title primary-text">{{stepGeneric.modifiedTimeOnSite}}</p>
+      <small class="md-body-2 secondary-text">Updated Time on Site</small>
+    </div>
+  </md-list-item>
+
+  <md-list-item>
+    <div layout="row" class="step-generic-padding-lo-row" style="margin-bottom: 75px;"></div>
+  </md-list-item>
+
+</md-list>
